@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tenant-1
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  sources:
+    - repoURL: 'https://github.com/Bhaumik-Patel/helm-provider'
+      path: my-gh-chart
+      targetRevision: HEAD
+    - repoURL: https://github.com/Bhaumik-Patel/helm-custom.git
+      path: tenant-1\dev
+      targetRevision: HEAD
+
