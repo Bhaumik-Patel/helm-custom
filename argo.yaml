@@ -13,6 +13,6 @@ spec:
       path: my-gh-chart
       targetRevision: HEAD
     - repoURL: https://github.com/Bhaumik-Patel/helm-custom.git
-      path: tenant-1\dev
+      path: tenant-1/dev
       targetRevision: HEAD
 
